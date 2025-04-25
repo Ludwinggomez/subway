@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empresa Subway - Franquicias oficiales de Subway en Latinoamérica. Sandwiches frescos y saludables.">
+    <meta name="keywords" content="subway, sandwiches, comida saludable, franquicias, restaurantes">
+    <title>EMPRESA SUBWAY | Franquicias Oficiales</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <img src="images/logo.png" alt="Subway Logo" class="pulse">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Empresa Subway Logo" width="180">
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#inicio" class="active">Inicio</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#franquicias">Franquicias</a></li>
+                        <li><a href="#opinion">Tu Opinión</a></li> <!-- Nueva opción -->
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li class="highlight"><a href="#franquicias" class="btn-nav">¡Abre tu Subway!</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('images/hero.jpg');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">FRESCURA EN CADA BOCADO</h1>
+                        <p class="wow fadeInUp" data-wow-delay="0.6s">Más de 50 años sirviendo sandwiches frescos y saludables</p>
+                        <div class="hero-btns wow fadeInUp" data-wow-delay="0.9s">
+                            <a href="#menu" class="btn-primary">Ver Menú</a>
+                            <a href="#franquicias" class="btn-secondary">Franquicias</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <a href="#menu"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Sección de Menú -->
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>NUESTRO MENÚ</h2>
+                <p>Selecciona entre nuestra variedad de sandwiches frescos</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="menu-categories">
+                <div class="category-tabs wow fadeInUp">
+                    <button class="tab-btn active" data-category="clasicos">Clásicos</button>
+                    <button class="tab-btn" data-category="especiales">Especiales</button>
+                    <button class="tab-btn" data-category="ensaladas">Ensaladas</button>
+                    <button class="tab-btn" data-category="desayunos">Desayunos</button>
+                </div>
+                
+                <div class="menu-items">
+                    <!-- Clásicos -->
+                    <div class="category-content active" id="clasicos">
+                        <div class="menu-grid">
+                            <!-- Item 1 -->
+                            <div class="menu-item wow fadeInUp">
+                                <div class="item-image">
+                                    <img src="https://media.telemundo52.com/2023/02/GettyImages-1456041072.jpg?quality=85&strip=all&fit=8256%2C5504" alt="Italian B.M.T.">
+                                    <span class="price">$5.99</span>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Italian B.M.T.<span class="veg-icon non-veg">NV</span></h3>
+                                    <p>Pepperoni, salami y jamón con tus vegetales favoritos en pan recién horneado.</p>
+                                    <div class="item-meta">
+                                        <span><i class="fas fa-fire"></i> 480 cal</span>
+                                        <span><i class="fas fa-clock"></i> 5 min</span>
+                                    </div>
+                                    <button class="add-to-cart" data-item="Italian B.M.T." data-price="5.99">Añadir al Carrito</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div class="menu-item wow fadeInUp">
+                                <div class="item-image">
+                                    <img src="https://www.subway.com/es-us/-/media/northamerica/usa/subway-series/2024/italianos/ss_promocard_ultimatebmt_dsk.png?la=es-US&h=422&w=750&mw=505" alt="Subway Club">
+                                    <span class="price">$6.49</span>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Subway Club<span class="veg-icon non-veg">NV</span></h3>
+                                    <p>Jamón, pavo y carne asada con queso y vegetales frescos.</p>
+                                    <div class="item-meta">
+                                        <span><i class="fas fa-fire"></i> 380 cal</span>
+                                        <span><i class="fas fa-clock"></i> 5 min</span>
+                                    </div>
+                                    <button class="add-to-cart" data-item="Subway Club" data-price="6.49">Añadir al Carrito</button>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+<div class="menu-item wow fadeInUp">
+    <div class="item-image">
+        <img src="https://klorii.ro/images/foods/10000-20000/10887.jpg" alt="Turkey California">
+        <span class="price">$6.99</span>
+    </div>
+    <div class="item-info">
+        <h3>Turkey California<span class="veg-icon non-veg">NV</span></h3>
+        <p>Pavo, queso Pepper Jack, aguacate, espinaca y cebolla morada.</p>
+        <div class="item-meta">
+            <span><i class="fas fa-fire"></i> 410 cal</span>
+            <span><i class="fas fa-clock"></i> 6 min</span>
+        </div>
+        <button class="add-to-cart" data-item="Turkey California" data-price="6.99">Añadir al Carrito</button>
+    </div>
+</div>
+
+<!-- Item 4 -->
+<div class="menu-item wow fadeInUp">
+    <div class="item-image">
+        <img src="https://external-preview.redd.it/92yGtKa-BVoSyMc5iT-tDnfqg-mXLJ0CrXVVJDPpZE8.jpg?auto=webp&s=ecb2cb9a4c7f99c95c879d9bb7ba2020098c872e" alt="Chicken Bacon Ranch">
+        <span class="price">$7.49</span>
+    </div>
+    <div class="item-info">
+        <h3>Chicken Bacon Ranch<span class="veg-icon non-veg">NV</span></h3>
+        <p>Pollo a la parrilla, tocino crujiente, queso cheddar y salsa ranch.</p>
+        <div class="item-meta">
+            <span><i class="fas fa-fire"></i> 610 cal</span>
+            <span><i class="fas fa-clock"></i> 7 min</span>
+        </div>
+        <button class="add-to-cart" data-item="Chicken Bacon Ranch" data-price="7.49">Añadir al Carrito</button>
+    </div>
+</div>
+
+<!-- Item 5 -->
+<div class="menu-item wow fadeInUp">
+    <div class="item-image">
+        <img src="https://i.pinimg.com/736x/a3/16/c5/a316c54879d548341c1d244996ff6d1a.jpg" alt="Spicy Italian">
+        <span class="price">$6.29</span>
+    </div>
+    <div class="item-info">
+        <h3>Spicy Italian<span class="veg-icon non-veg">NV</span></h3>
+        <p>Salami y pepperoni con queso, lechuga, tomate y pepinillos.</p>
+        <div class="item-meta">
+            <span><i class="fas fa-fire"></i> 470 cal</span>
+            <span><i class="fas fa-clock"></i> 5 min</span>
+        </div>
+        <button class="add-to-cart" data-item="Spicy Italian" data-price="6.29">Añadir al Carrito</button>
+    </div>
+</div>
+
+<!-- Item 6 -->
+<div class="menu-item wow fadeInUp">
+    <div class="item-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDs2zda6cl95_NrQvltrdGhEp9v1mqtHKAzg&s" alt="Meatball Marinara">
+        <span class="price">$6.79</span>
+    </div>
+    <div class="item-info">
+        <h3>Meatball Marinara<span class="veg-icon non-veg">NV</span></h3>
+        <p>Albóndigas en salsa marinara con queso mozzarella derretido.</p>
+        <div class="item-meta">
+            <span><i class="fas fa-fire"></i> 580 cal</span>
+            <span><i class="fas fa-clock"></i> 6 min</span>
+        </div>
+        <button class="add-to-cart" data-item="Meatball Marinara" data-price="6.79">Añadir al Carrito</button>
+    </div>
+</div>
+
+<!-- Item 7 -->
+<div class="menu-item wow fadeInUp">
+    <div class="item-image">
+        <img src="https://external-preview.redd.it/oz7ZxEulWuKfw-3EKWvJpxv4kl_s9boC7aM3b146laI.jpg?auto=webp&s=76ea45a644eae4d6729641cfc9ed7f8fa53acc02" alt="Veggie Delite">
+        <span class="price">$5.49</span>
+    </div>
+    <div class="item-info">
+        <h3>Veggie Delite<span class="veg-icon">V</span></h3>
+        <p>Sub vegetariano con lechuga, tomate, pepinillos, aceitunas y más.</p>
+        <div class="item-meta">
+            <span><i class="fas fa-fire"></i> 230 cal</span>
+            <span><i class="fas fa-clock"></i> 4 min</span>
+        </div>
+        <button class="add-to-cart" data-item="Veggie Delite" data-price="5.49">Añadir al Carrito</button>
+    </div>
+</div>  
+                            <!-- Más items... -->
+                        </div>
+                    </div>
+                    <!-- Especiales -->
+<div class="category-content" id="especiales">
+    <div class="menu-grid">
+
+        <!-- Especial 1 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0e2sV_RCLLnde4NHveSDgPmnDz3Q3jbEL3g&s" alt="The Boss">
+                <span class="price">$7.99</span>
+            </div>
+            <div class="item-info">
+                <h3>The Boss<span class="veg-icon non-veg">NV</span></h3>
+                <p>Albóndigas, pepperoni, mozzarella y salsa marinara en pan italiano.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 640 cal</span>
+                    <span><i class="fas fa-clock"></i> 8 min</span>
+                </div>
+                <button class="add-to-cart" data-item="The Boss" data-price="7.99">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Especial 2 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpu0SU-4voEjeworh2Cn3916EWJcfDRSamQA&s" alt="The Outlaw">
+                <span class="price">$8.29</span>
+            </div>
+            <div class="item-info">
+                <h3>The Outlaw<span class="veg-icon non-veg">NV</span></h3>
+                <p>Carne asada, queso Pepper Jack, cebolla, pimientos verdes y BBQ.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 690 cal</span>
+                    <span><i class="fas fa-clock"></i> 9 min</span>
+                </div>
+                <button class="add-to-cart" data-item="The Outlaw" data-price="8.29">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Especial 3 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHBETEwKaolh63OVTKAntR9HhMUVsGBlcAg&s" alt="The Monster">
+                <span class="price">$8.49</span>
+            </div>
+            <div class="item-info">
+                <h3>The Monster<span class="veg-icon non-veg">NV</span></h3>
+                <p>Carne asada, bacon, queso Monterey cheddar y chipotle.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 740 cal</span>
+                    <span><i class="fas fa-clock"></i> 10 min</span>
+                </div>
+                <button class="add-to-cart" data-item="The Monster" data-price="8.49">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Especial 4 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-pX4TxdZ5jLKmh-5DRNPBZWQW2IVSMRykFw&s" alt="The Great Garlic">
+                <span class="price">$7.89</span>
+            </div>
+            <div class="item-info">
+                <h3>The Great Garlic<span class="veg-icon non-veg">NV</span></h3>
+                <p>Pechuga de pollo, bacon, doble queso, lechuga y alioli de ajo asado.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 680 cal</span>
+                    <span><i class="fas fa-clock"></i> 8 min</span>
+                </div>
+                <button class="add-to-cart" data-item="The Great Garlic" data-price="7.89">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Especial 5 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://fastfoodnutrition.org/item-photos/full/167078551256173.png" alt="The Champ">
+                <span class="price">$8.59</span>
+            </div>
+            <div class="item-info">
+                <h3>The Champ<span class="veg-icon non-veg">NV</span></h3>
+                <p>Pechuga de pollo crispy, bacon, queso y salsa buffalo cremosa.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 720 cal</span>
+                    <span><i class="fas fa-clock"></i> 10 min</span>
+                </div>
+                <button class="add-to-cart" data-item="The Champ" data-price="8.59">Añadir al Carrito</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Ensaladas -->
+<div class="category-content" id="ensaladas">
+    <div class="menu-grid">
+
+        <!-- Ensalada 1 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://image.eatencdn.com/image/25b81ff3-5a63-436a-8502-31d1c053f8f5/medium/image.jpg" alt="Chicken Tikka Salad">
+                <span class="price">$6.99</span>
+            </div>
+            <div class="item-info">
+                <h3>Chicken Tikka Salad<span class="veg-icon non-veg">NV</span></h3>
+                <p>Ensalada fresca con pollo tikka, lechuga, tomates, pepinos y cebolla morada.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 330 cal</span>
+                    <span><i class="fas fa-clock"></i> 5 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Chicken Tikka Salad" data-price="6.99">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Ensalada 2 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs4pCwd5IqaDSyOgkSyTe0nfkn85Qa6bZbBA&s" alt="Tuna Salad">
+                <span class="price">$6.49</span>
+            </div>
+            <div class="item-info">
+                <h3>Tuna Salad<span class="veg-icon non-veg">NV</span></h3>
+                <p>Ensalada clásica de atún con una mezcla de vegetales frescos.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 310 cal</span>
+                    <span><i class="fas fa-clock"></i> 4 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Tuna Salad" data-price="6.49">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Ensalada 3 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://www.subway.com.my/images/menu/salad/Salad%20Veggie%20Delite.png" alt="Veggie Delite Salad">
+                <span class="price">$5.79</span>
+            </div>
+            <div class="item-info">
+                <h3>Veggie Delite Salad<span class="veg-icon">V</span></h3>
+                <p>Lechuga crujiente, espinaca, tomate, pepinos, aceitunas y pimientos.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 150 cal</span>
+                    <span><i class="fas fa-clock"></i> 3 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Veggie Delite Salad" data-price="5.79">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Ensalada 4 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://i.pinimg.com/736x/d9/f9/88/d9f9889d021b4e6f64fb15db9c797010.jpg" alt="Rotisserie Chicken Salad">
+                <span class="price">$7.29</span>
+            </div>
+            <div class="item-info">
+                <h3>Rotisserie Chicken Salad<span class="veg-icon non-veg">NV</span></h3>
+                <p>Pollo rostizado desmenuzado sobre una cama de vegetales frescos.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 350 cal</span>
+                    <span><i class="fas fa-clock"></i> 5 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Rotisserie Chicken Salad" data-price="7.29">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Ensalada 5 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNtmzfBC8z7jckHK0iSfheoNL9b-AdozGFg&s" alt="BLT Salad">
+                <span class="price">$6.99</span>
+            </div>
+            <div class="item-info">
+                <h3>BLT Salad<span class="veg-icon non-veg">NV</span></h3>
+                <p>Bacon, lechuga, tomate y queso con tu aderezo favorito.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 400 cal</span>
+                    <span><i class="fas fa-clock"></i> 4 min</span>
+                </div>
+                <button class="add-to-cart" data-item="BLT Salad" data-price="6.99">Añadir al Carrito</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Desayunos -->
+<div class="category-content" id="desayunos">
+    <div class="menu-grid">
+
+        <!-- Desayuno 1 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsWQLL-jeWX84VgJIUTGbhM59G1io4nxK5UA&s" alt="Egg & Cheese">
+                <span class="price">$4.49</span>
+            </div>
+            <div class="item-info">
+                <h3>Egg & Cheese<span class="veg-icon">V</span></h3>
+                <p>Huevos revueltos con queso derretido en pan tostado. Ideal para comenzar el día.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 380 cal</span>
+                    <span><i class="fas fa-clock"></i> 3 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Egg & Cheese" data-price="4.49">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Desayuno 2 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm311APGHLAoKNZ2C3lIPXFt8pYaE2pm1ecg&s" alt="Bacon, Egg & Cheese">
+                <span class="price">$4.99</span>
+            </div>
+            <div class="item-info">
+                <h3>Bacon, Egg & Cheese<span class="veg-icon non-veg">NV</span></h3>
+                <p>Tocino crujiente, huevo y queso en pan tostado. Un clásico desayuno Subway.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 420 cal</span>
+                    <span><i class="fas fa-clock"></i> 4 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Bacon, Egg & Cheese" data-price="4.99">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Desayuno 3 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo4kLE2ycvzrZtjugwN6WhHW599VN62hVxAg&s" alt="Steak, Egg & Cheese">
+                <span class="price">$5.49</span>
+            </div>
+            <div class="item-info">
+                <h3>Steak, Egg & Cheese<span class="veg-icon non-veg">NV</span></h3>
+                <p>Bistec sazonado, huevo y queso. Perfecto para los más hambrientos por la mañana.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 490 cal</span>
+                    <span><i class="fas fa-clock"></i> 5 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Steak, Egg & Cheese" data-price="5.49">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Desayuno 4 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://images-cdn.ispot.tv/ad/7IN4/default-large.jpg" alt="Sunrise Subway Melt">
+                <span class="price">$5.99</span>
+            </div>
+            <div class="item-info">
+                <h3>Sunrise Subway Melt<span class="veg-icon non-veg">NV</span></h3>
+                <p>Jamón, pavo, bacon, huevo y queso, todo en un delicioso sub matutino.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 540 cal</span>
+                    <span><i class="fas fa-clock"></i> 6 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Sunrise Subway Melt" data-price="5.99">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Desayuno 5 -->
+        <div class="menu-item wow fadeInUp">
+            <div class="item-image">
+                <img src="https://door2doordeliveries.com/wp-content/uploads/2023/09/5954bcb006b10dbfd0bc160f6370faf3-410.jpeg" alt="Black Forest Ham, Egg & Cheese">
+                <span class="price">$4.89</span>
+            </div>
+            <div class="item-info">
+                <h3>Black Forest Ham, Egg & Cheese<span class="veg-icon non-veg">NV</span></h3>
+                <p>Jamón Black Forest con huevo y queso en pan tostado. Sabor y energía.</p>
+                <div class="item-meta">
+                    <span><i class="fas fa-fire"></i> 400 cal</span>
+                    <span><i class="fas fa-clock"></i> 4 min</span>
+                </div>
+                <button class="add-to-cart" data-item="Black Forest Ham, Egg & Cheese" data-price="4.89">Añadir al Carrito</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+                    <!-- Otras categorías... -->
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Sección de Franquicias -->
+    <section id="franquicias" class="section bg-light">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>OPORTUNIDAD DE FRANQUICIAS</h2>
+                <p>Únete a la familia Subway y haz crecer tu negocio</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="franquicias-content">
+                <div class="franquicias-info wow fadeInLeft">
+                    <h3>¿Por qué una franquicia Subway?</h3>
+                    <ul class="check-list">
+                        <li>Marca reconocida mundialmente</li>
+                        <li>Modelo de negocio probado</li>
+                        <li>Soporte continuo y capacitación</li>
+                        <li>Inversión accesible</li>
+                        <li>Flexibilidad en ubicaciones</li>
+                    </ul>
+                    
+                    <div class="franquicias-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="40000">0</span>
+                            <span class="stat-label">Restaurantes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-label">Países</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="55">0</span>
+                            <span class="stat-label">Años</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="franquicias-form wow fadeInRight">
+                    <h3>Solicita información</h3>
+                    <form id="franquiciaForm">
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" required>
+                            <label for="nombre">Nombre Completo</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Correo Electrónico</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" required>
+                            <label for="telefono">Teléfono</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="pais" name="pais" required>
+                                <option value=""></option>
+                                <option value="mx">México</option>
+                                <option value="co">Colombia</option>
+                                <option value="pe">Perú</option>
+                                <option value="cl">Chile</option>
+                                <option value="ar">Argentina</option>
+                            </select>
+                            <label for="pais">País</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="number" id="inversion" name="inversion" required>
+                            <label for="inversion">Capital de Inversión (USD)</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+                            <label for="comentarios">Comentarios</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-block">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de Opinión -->
+<section id="opinion" class="section">
+    <div class="container">
+        <div class="section-header wow fadeInUp">
+            <h2>QUEREMOS CONOCER TU OPINIÓN</h2>
+            <p>Tu feedback nos ayuda a seguir mejorando</p>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="opinion-content">
+            <div class="opinion-text wow fadeInLeft">
+                <h3>¿Cómo estamos haciendo?</h3>
+                <p>En EMPRESA SUBWAY valoramos mucho la opinión de nuestros clientes. Por favor tómate un momento para compartir tu experiencia reciente con nosotros.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-comment-dots"></i>
+                        <h4>Feedback Anónimo</h4>
+                        <p>Tus comentarios son confidenciales si así lo prefieres.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Respuesta Rápida</h4>
+                        <p>Revisamos todas las opiniones semanalmente.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-gift"></i>
+                        <h4>Participa en sorteos</h4>
+                        <p>Al completar la encuesta puedes ganar premios mensuales.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="opinion-form wow fadeInRight">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZdGnL9HT0lkKkjTmuO4tHAVfpXJLXacr3-hp2DSSFAe1hKw/viewform?embedded=true" 
+                        width="100%" 
+                        height="1200" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        style="border: none; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    Cargando…
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>NUESTRA HISTORIA</h2>
+                <p>Más de medio siglo sirviendo frescura</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text wow fadeInLeft">
+                    <h3>Desde 1965</h3>
+                    <p>Fundada en Bridgeport, Connecticut, Subway ha crecido hasta convertirse en la cadena de restaurantes más grande del mundo, con presencia en más de 100 países.</p>
+                    
+                    <p>Como franquiciador oficial en Latinoamérica, Empresa Subway ha abierto más de 500 locales en la región, manteniendo siempre los más altos estándares de calidad y servicio.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Ingredientes Frescos</h4>
+                            <p>Utilizamos vegetales frescos cortados diariamente.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Opciones Saludables</h4>
+                            <p>Menú con opciones bajas en calorías y grasas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image wow fadeInRight">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR94il-2rQdz91tqau9VjWhnDy60QP8qNw4XA&s" alt="Historia Subway">
+                    <div class="experience-badge">
+                        <span class="years">55+</span>
+                        <span class="label">Años de Experiencia</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-section wow fadeInUp">
+                <h3>Nuestro Equipo Ejecutivo</h3>
+                
+                <div class="team-grid">
+                    <!-- Miembro 1 -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://i.ytimg.com/vi/sIGeO0qbQ8g/maxresdefault.jpg" alt="CEO">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Carlos Méndez</h4>
+                            <p>CEO & Founder</p>
+                        </div>
+                    </div>
+                                        <!-- Miembro 1 -->
+                                        <div class="team-member">
+                                            <div class="member-photo">
+                                                <img src="https://i.ytimg.com/vi/sIGeO0qbQ8g/maxresdefault.jpg" alt="CEO">
+                                                <div class="social-links">
+                                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="member-info">
+                                                <h4>Carlos Méndez</h4>
+                                                <p>CEO & Founder</p>
+                                            </div>
+                                        </div>
+                                                            <!-- Miembro 1 -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://i.ytimg.com/vi/sIGeO0qbQ8g/maxresdefault.jpg" alt="CEO">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Carlos Méndez</h4>
+                            <p>CEO & Founder</p>
+                        </div>
+                    </div>
+                                        <!-- Miembro 1 -->
+                                        <div class="team-member">
+                                            <div class="member-photo">
+                                                <img src="https://i.ytimg.com/vi/sIGeO0qbQ8g/maxresdefault.jpg" alt="CEO">
+                                                <div class="social-links">
+                                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="member-info">
+                                                <h4>Carlos Méndez</h4>
+                                                <p>CEO & Founder</p>
+                                            </div>
+                                        </div>
+                    
+                    <!-- Más miembros... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>CONTÁCTANOS</h2>
+                <p>Estamos aquí para responder tus preguntas</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info wow fadeInLeft">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Oficinas Corporativas</h4>
+                            <p>Av. Insurgentes Sur 1234, Col. Condesa<br>Ciudad de México, 06140</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+52 55 1234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contacto@empresasubway.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes: 9:00 - 18:00<br>Sábado: 9:00 - 14:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form wow fadeInRight">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="contact-name" name="name" required>
+                                <label for="contact-name">Nombre Completo</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="contact-email" name="email" required>
+                                <label for="contact-email">Correo Electrónico</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="contact-subject" name="subject" required>
+                            <label for="contact-subject">Asunto</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                            <label for="contact-message">Mensaje</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8882445525436!2d-99.1776909845336!3d19.419246246121194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1621552176347!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="Subway Logo" width="160">
+                    <p>Franquiciador oficial de Subway en Latinoamérica. Más de 20 años de experiencia en el desarrollo de la marca.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#franquicias">Franquicias</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Suscríbete para recibir nuestras promociones.</p>
+                    <form id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" placeholder="Tu correo electrónico" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Empresa Subway. Todos los derechos reservados.</p>
+                </div>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/525512345678" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        // Inicializar WOW.js para animaciones
+        new WOW().init();
+        
+        // Contador de estadísticas
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+        
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            updateCount();
+        });
+    </script>
+</body>
+</html>

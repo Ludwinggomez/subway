@@ -1,0 +1,162 @@
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 50px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .section {
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 42px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+    }
+    
+    .franquicias-content,
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .franquicias-info {
+        margin-bottom: 40px;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        height: 70px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    
+    .main-nav.active {
+        left: 0;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .main-nav ul li {
+        margin: 0 0 20px 0;
+    }
+    
+    .main-nav ul li a {
+        font-size: 16px;
+    }
+    
+    .main-nav ul li.highlight {
+        margin-top: 20px;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero {
+        min-height: 600px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .section-header h2 {
+        font-size: 30px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 50px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 26px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+    }
+    
+    .franquicias-form,
+    .contact-info,
+    .contact-form {
+        padding: 30px 20px;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
