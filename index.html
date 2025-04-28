@@ -937,6 +937,460 @@
 </div>
 
                     <!-- Otras categorías... -->
+
+                    <!-- Botón para abrir personalización -->
+<div class="text-center wow fadeInUp" style="margin-top: 40px;">
+    <button id="btn-personalizar" class="btn-primary btn-large">
+        <i class="fas fa-utensils"></i> Personaliza tu Subway
+    </button>
+</div>
+
+<!-- Modal de personalización -->
+<div id="modal-personalizar" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Personaliza tu Subway</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        
+        <div class="modal-body">
+            <!-- Resumen del pedido -->
+            <div class="pedido-resumen">
+                <h4>Tu Creación</h4>
+                <div class="sandwich-preview">
+                    <img src="https://www.subway.com/ns/images/menu/IND_2020_SubOfTheDay_1140x640.jpg" alt="Sandwich personalizado">
+                    <div class="ingredientes-seleccionados"></div>
+                </div>
+                <div class="precio-total">Total: $<span>5.99</span></div>
+            </div>
+            
+            <!-- Pasos de personalización -->
+            <div class="pasos-personalizacion">
+                <div class="paso-indicador">
+                    <div class="paso active" data-paso="1">1. Pan</div>
+                    <div class="paso" data-paso="2">2. Proteína</div>
+                    <div class="paso" data-paso="3">3. Queso</div>
+                    <div class="paso" data-paso="4">4. Vegetales</div>
+                    <div class="paso" data-paso="5">5. Salsas</div>
+                    <div class="paso" data-paso="6">6. Extras</div>
+                </div>
+                
+                <!-- Contenido de cada paso -->
+                <div class="paso-contenido active" data-paso="1">
+                    <h4>Elige tu pan</h4>
+                    <div class="opciones-grid">
+                        <div class="opcion" data-opcion="pan" data-valor="italiano" data-precio="0">
+                            <img src="https://www.subway.com/ns/images/menu/pan-italiano.jpg" alt="Pan Italiano">
+                            <p>Italiano</p>
+                        </div>
+                        <div class="opcion" data-opcion="pan" data-valor="trigo" data-precio="0">
+                            <img src="https://www.subway.com/ns/images/menu/pan-trigo.jpg" alt="Pan de Trigo">
+                            <p>Trigo</p>
+                        </div>
+                        <!-- Más opciones de pan -->
+                    </div>
+                </div>
+                
+                <!-- Más pasos... -->
+                
+                <div class="paso-contenido" data-paso="4">
+                    <h4>Elige tus vegetales</h4>
+                    <div class="opciones-grid vegetales">
+                        <div class="opcion" data-opcion="vegetal" data-valor="lechuga" data-precio="0">
+                            <img src="https://www.subway.com/ns/images/ingredients/lettuce.png" alt="Lechuga">
+                            <p>Lechuga</p>
+                        </div>
+                        <div class="opcion" data-opcion="vegetal" data-valor="tomate" data-precio="0">
+                            <img src="https://www.subway.com/ns/images/ingredients/tomatoes.png" alt="Tomate">
+                            <p>Tomate</p>
+                        </div>
+                        <!-- Más vegetales -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+            <button class="btn-prev"><i class="fas fa-arrow-left"></i> Anterior</button>
+            <button class="btn-next">Siguiente <i class="fas fa-arrow-right"></i></button>
+            <button class="btn-confirmar" disabled>Confirmar Pedido</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilos para el modal de personalización */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    .modal-content {
+        background-color: white;
+        margin: 2% auto;
+        width: 90%;
+        max-width: 900px;
+        border-radius: 10px;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+        overflow: hidden;
+        animation: modalFadeIn 0.3s;
+    }
+    
+    @keyframes modalFadeIn {
+        from { opacity: 0; transform: translateY(-50px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .modal-header {
+        padding: 20px;
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .modal-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    
+    .close-modal {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    
+    .modal-body {
+        display: flex;
+        padding: 0;
+    }
+    
+    .pedido-resumen {
+        width: 35%;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-right: 1px solid #eee;
+    }
+    
+    .sandwich-preview {
+        position: relative;
+        margin: 20px 0;
+    }
+    
+    .sandwich-preview img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .ingredientes-seleccionados {
+        margin-top: 15px;
+        min-height: 100px;
+    }
+    
+    .ingrediente-tag {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin: 5px;
+        font-size: 0.8rem;
+    }
+    
+    .precio-total {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .pasos-personalizacion {
+        width: 65%;
+        padding: 20px;
+    }
+    
+    .paso-indicador {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    
+    .paso {
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    
+    .paso.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .paso-contenido {
+        display: none;
+        padding: 10px;
+    }
+    
+    .paso-contenido.active {
+        display: block;
+    }
+    
+    .opciones-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .opcion {
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+    }
+    
+    .opcion:hover, .opcion.selected {
+        border-color: var(--primary-color);
+        box-shadow: 0 5px 15px rgba(0,147,59,0.1);
+    }
+    
+    .opcion img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 8px;
+    }
+    
+    .opcion p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px;
+        border-top: 1px solid #eee;
+    }
+    
+    .modal-footer button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .btn-prev, .btn-next {
+        background-color: #f5f5f5;
+        color: var(--text-color);
+    }
+    
+    .btn-confirmar {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .btn-confirmar:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .modal-content {
+            width: 95%;
+            margin: 10px auto;
+        }
+        
+        .modal-body {
+            flex-direction: column;
+        }
+        
+        .pedido-resumen, .pasos-personalizacion {
+            width: 100%;
+        }
+        
+        .paso-indicador {
+            flex-wrap: wrap;
+        }
+        
+        .paso {
+            margin-bottom: 5px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('modal-personalizar');
+        const btnOpen = document.getElementById('btn-personalizar');
+        const btnClose = document.querySelector('.close-modal');
+        const pasos = document.querySelectorAll('.paso');
+        const pasoContenidos = document.querySelectorAll('.paso-contenido');
+        const btnPrev = document.querySelector('.btn-prev');
+        const btnNext = document.querySelector('.btn-next');
+        const btnConfirmar = document.querySelector('.btn-confirmar');
+        const ingredientesSeleccionados = document.querySelector('.ingredientes-seleccionados');
+        const precioTotal = document.querySelector('.precio-total span');
+        
+        let pasoActual = 1;
+        let pedido = {
+            pan: null,
+            proteinas: [],
+            quesos: [],
+            vegetales: [],
+            salsas: [],
+            extras: [],
+            precioBase: 5.99,
+            total: 5.99
+        };
+        
+        // Abrir modal
+        btnOpen.addEventListener('click', function() {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Cerrar modal
+        btnClose.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Cerrar al hacer clic fuera
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Navegación entre pasos
+        function mostrarPaso(n) {
+            pasoActual = n;
+            
+            // Actualizar indicadores
+            pasos.forEach(paso => {
+                paso.classList.remove('active');
+                if (parseInt(paso.dataset.paso) === n) {
+                    paso.classList.add('active');
+                }
+            });
+            
+            // Mostrar contenido del paso
+            pasoContenidos.forEach(contenido => {
+                contenido.classList.remove('active');
+                if (parseInt(contenido.dataset.paso) === n) {
+                    contenido.classList.add('active');
+                }
+            });
+            
+            // Actualizar botones
+            btnPrev.style.display = n === 1 ? 'none' : 'block';
+            btnNext.style.display = n === 6 ? 'none' : 'block';
+            btnConfirmar.style.display = n === 6 ? 'block' : 'none';
+        }
+        
+        // Selección de opciones
+        document.querySelectorAll('.opcion').forEach(opcion => {
+            opcion.addEventListener('click', function() {
+                const tipo = this.dataset.opcion;
+                const valor = this.dataset.valor;
+                const precio = parseFloat(this.dataset.precio || 0);
+                
+                // Manejar selección según el tipo
+                if (tipo === 'pan' || tipo === 'tamaño') {
+                    // Selección única
+                    document.querySelectorAll(`.opcion[data-opcion="${tipo}"]`).forEach(o => {
+                        o.classList.remove('selected');
+                    });
+                    this.classList.add('selected');
+                    pedido[tipo] = valor;
+                } else {
+                    // Selección múltiple
+                    this.classList.toggle('selected');
+                    if (this.classList.contains('selected')) {
+                        pedido[tipo+'s'].push(valor);
+                    } else {
+                        pedido[tipo+'s'] = pedido[tipo+'s'].filter(item => item !== valor);
+                    }
+                }
+                
+                // Actualizar precio
+                actualizarPrecio();
+                actualizarResumen();
+            });
+        });
+        
+        function actualizarPrecio() {
+            // Calcular total (aquí puedes agregar lógica más compleja)
+            pedido.total = pedido.precioBase;
+            precioTotal.textContent = pedido.total.toFixed(2);
+            
+            // Habilitar confirmación si hay pan seleccionado
+            btnConfirmar.disabled = !pedido.pan;
+        }
+        
+        function actualizarResumen() {
+            ingredientesSeleccionados.innerHTML = '';
+            
+            // Mostrar todos los ingredientes seleccionados
+            if (pedido.pan) {
+                agregarIngredienteTag(`Pan ${pedido.pan}`);
+            }
+            
+            pedido.proteinas.forEach(p => agregarIngredienteTag(p));
+            pedido.quesos.forEach(q => agregarIngredienteTag(q));
+            pedido.vegetales.forEach(v => agregarIngredienteTag(v));
+            pedido.salsas.forEach(s => agregarIngredienteTag(s));
+            pedido.extras.forEach(e => agregarIngredienteTag(e));
+        }
+        
+        function agregarIngredienteTag(nombre) {
+            const tag = document.createElement('span');
+            tag.className = 'ingrediente-tag';
+            tag.textContent = nombre;
+            ingredientesSeleccionados.appendChild(tag);
+        }
+        
+        // Eventos de navegación
+        btnPrev.addEventListener('click', function() {
+            if (pasoActual > 1) mostrarPaso(pasoActual - 1);
+        });
+        
+        btnNext.addEventListener('click', function() {
+            if (pasoActual < 6) mostrarPaso(pasoActual + 1);
+        });
+        
+        // Confirmar pedido
+        btnConfirmar.addEventListener('click', function() {
+            // Aquí puedes enviar el pedido al carrito o sistema de pedidos
+            alert('Pedido personalizado añadido al carrito!');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Inicializar
+        mostrarPaso(1);
+    });
+</script>
                 </div>
             </div>
             
