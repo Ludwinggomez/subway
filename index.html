@@ -53,13 +53,11 @@
         </div>
     </header>
 
-<!-- Hero Section -->
-<!-- Hero Section -->
+<!-- Hero Section Completo -->
 <section class="hero" id="inicio">
     <div class="hero-slider">
         <div class="slide active">
-            <!-- Imagen de fondo que cubre toda la sección -->
-            <div class="hero-bg" style="background-image: url('https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/subway-ultima-1.jpg');"></div>
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1 class="wow fadeInUp" data-wow-delay="0.3s">SABOR FRESCO EN TODA LATINOAMÉRICA</h1>
@@ -72,11 +70,399 @@
             </div>
         </div>
     </div>
-    
     <div class="scroll-down">
         <a href="#menu"><i class="fas fa-chevron-down"></i></a>
     </div>
 </section>
+
+<!-- Sección de Sucursales -->
+<section id="sucursales" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>NUESTRAS SUCURSALES EN LATINOAMÉRICA</h2>
+            <p>Encuentra tu Subway más cercano en estos países</p>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Mapa Interactivo -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <!-- Listado de Sucursales por País -->
+        <div class="sucursales-grid">
+            <!-- México -->
+            <div class="pais-card">
+                <div class="pais-header">
+                    <img src="https://flagcdn.com/w320/mx.png" alt="Bandera México">
+                    <h3>México</h3>
+                    <span class="contador">120+ sucursales</span>
+                </div>
+                <div class="ciudades-list">
+                    <h4>Principales ciudades:</h4>
+                    <ul>
+                        <li>Ciudad de México <span>45 sucursales</span></li>
+                        <li>Monterrey <span>18 sucursales</span></li>
+                        <li>Guadalajara <span>15 sucursales</span></li>
+                        <li>Puebla <span>8 sucursales</span></li>
+                        <li>Tijuana <span>7 sucursales</span></li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver todas</a>
+                </div>
+            </div>
+
+            <!-- Colombia -->
+            <div class="pais-card">
+                <div class="pais-header">
+                    <img src="https://flagcdn.com/w320/co.png" alt="Bandera Colombia">
+                    <h3>Colombia</h3>
+                    <span class="contador">85+ sucursales</span>
+                </div>
+                <div class="ciudades-list">
+                    <h4>Principales ciudades:</h4>
+                    <ul>
+                        <li>Bogotá <span>32 sucursales</span></li>
+                        <li>Medellín <span>15 sucursales</span></li>
+                        <li>Cali <span>12 sucursales</span></li>
+                        <li>Barranquilla <span>8 sucursales</span></li>
+                        <li>Cartagena <span>6 sucursales</span></li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver todas</a>
+                </div>
+            </div>
+
+            <!-- Argentina -->
+            <div class="pais-card">
+                <div class="pais-header">
+                    <img src="https://flagcdn.com/w320/ar.png" alt="Bandera Argentina">
+                    <h3>Argentina</h3>
+                    <span class="contador">65+ sucursales</span>
+                </div>
+                <div class="ciudades-list">
+                    <h4>Principales ciudades:</h4>
+                    <ul>
+                        <li>Buenos Aires <span>28 sucursales</span></li>
+                        <li>Córdoba <span>12 sucursales</span></li>
+                        <li>Rosario <span>8 sucursales</span></li>
+                        <li>Mendoza <span>6 sucursales</span></li>
+                        <li>La Plata <span>4 sucursales</span></li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver todas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hero Section */
+    .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+        z-index: -1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding-top: 20vh;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .hero-btns {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        border: 2px solid var(--secondary-color);
+    }
+
+    .btn-primary:hover {
+        background-color: transparent;
+        color: var(--secondary-color);
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+        background-color: white;
+        color: var(--primary-color);
+    }
+
+    .scroll-down {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+    }
+
+    .scroll-down a {
+        color: white;
+        font-size: 24px;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-20px); }
+        60% { transform: translateY(-10px); }
+    }
+
+    /* Sección de Sucursales */
+    .section {
+        padding: 80px 0;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+
+    .section-header p {
+        color: #666;
+        font-size: 1.2rem;
+    }
+
+    .divider {
+        height: 3px;
+        width: 80px;
+        background-color: var(--secondary-color);
+        margin: 20px auto;
+    }
+
+    #map {
+        height: 500px;
+        width: 100%;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        margin-bottom: 50px;
+    }
+
+    .sucursales-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .pais-card {
+        background: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+        transition: transform 0.3s ease;
+    }
+
+    .pais-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .pais-header {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .pais-header img {
+        width: 40px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 2px;
+        margin-right: 15px;
+    }
+
+    .pais-header h3 {
+        margin: 0;
+        flex-grow: 1;
+        font-size: 1.3rem;
+    }
+
+    .contador {
+        background: var(--secondary-color);
+        color: var(--text-color);
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .ciudades-list {
+        padding: 20px;
+    }
+
+    .ciudades-list h4 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    .ciudades-list ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .ciudades-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ciudades-list li span {
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .btn-vermas {
+        display: inline-block;
+        padding: 8px 20px;
+        background: var(--secondary-color);
+        color: var(--text-color);
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .btn-vermas:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+        }
+        
+        .hero-btns {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .btn-primary, .btn-secondary {
+            width: 100%;
+            text-align: center;
+        }
+        
+        #map {
+            height: 350px;
+        }
+    }
+</style>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Inicializar mapa
+    document.addEventListener('DOMContentLoaded', function() {
+        const map = L.map('map').setView([-8.7832, -55.4915], 4);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Marcadores de ejemplo
+        const sucursales = [
+            {lat: 19.4326, lng: -99.1332, title: "CDMX Centro", pais: "México"},
+            {lat: 19.4135, lng: -99.1675, title: "CDMX Polanco", pais: "México"},
+            {lat: 25.6866, lng: -100.3161, title: "Monterrey", pais: "México"},
+            {lat: 20.6736, lng: -103.344, title: "Guadalajara", pais: "México"},
+            {lat: 4.7110, lng: -74.0721, title: "Bogotá Norte", pais: "Colombia"},
+            {lat: 6.2476, lng: -75.5658, title: "Medellín", pais: "Colombia"},
+            {lat: -34.6037, lng: -58.3816, title: "Buenos Aires", pais: "Argentina"},
+            {lat: -31.4135, lng: -64.181, title: "Córdoba", pais: "Argentina"},
+            {lat: -12.0464, lng: -77.0428, title: "Lima", pais: "Perú"},
+            {lat: -33.4489, lng: -70.6693, title: "Santiago", pais: "Chile"}
+        ];
+
+        // Icono personalizado
+        const subwayIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968534.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32]
+        });
+
+        sucursales.forEach(suc => {
+            L.marker([suc.lat, suc.lng], {icon: subwayIcon})
+                .addTo(map)
+                .bindPopup(`<b>${suc.title}</b><br>${suc.pais}`);
+        });
+    });
+</script>
     <!-- Sección de Menú -->
     <section id="menu" class="section">
         <div class="container">
