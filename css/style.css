@@ -1166,3 +1166,13 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.btn-sucursales {
+    background-color: #FFC72C;
+    color: #333;
+    border: 2px solid #FFC72C;
+}
+
+.btn-sucursales:hover {
+    background-color: transparent;
+    color: #FFC72C;
+}
